@@ -1,0 +1,45 @@
+alias zshrc="vim ~/.zshrc"
+alias brew="/opt/homebrew/bin/brew"
+
+# Git
+alias ga="git add"
+alias gch="git checkout"
+alias gs="git status"
+alias gl="git log"
+alias gc="git commit --verbose"
+alias gca="git commit --verbose --amend"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gbv="git branch -v"
+alias gu="git reset HEAD"
+alias gpsu="git push --set-upstream origin"
+alias gpc="git pull && cleanup master"
+alias gpcm="git pull && cleanup main"
+gdel() {
+  git branch -D $@
+}
+cleanup () {
+  echo 'Pruning local branches'
+  git branch --merged $1 | grep -v "\* $1" | xargs -n 1 git branch -d
+}
+cleanup_main () {
+  echo 'Pruning local branches'
+  git branch --merged main | grep -v "\* main" | xargs -n 1 git branch -d
+}
+gnb () {
+  git checkout -b $@
+  git push --set-upstream origin $@
+}
+
+# Docker
+alias rmcontainers="docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm"
+alias dc="docker-compose"
+
+# General
+alias timestamp="date +%s"
+
+# Team 0
+alias cdp="cd ~/playtime"
+alias dcmigrate="dc up mysql-playtime-migrations mysql-playtime-library-migrations"
+alias dcseed="dc up mysql-playtime-seeds mysql-playtime-library-seeds"
+
