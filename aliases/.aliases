@@ -43,3 +43,6 @@ alias cdp="cd ~/playtime"
 alias dcmigrate="dc up mysql-playtime-migrations mysql-playtime-library-migrations"
 alias dcseed="dc up mysql-playtime-seeds mysql-playtime-library-seeds"
 
+# Windows
+alias wslsetup="sudo mkdir /run/resolvconf && sudo touch /run/resolvconf/resolv.conf && sudo sysctl fs.inotify.max_user_instances=512 && sudo sysctl -p && sudo vim /run/resolvconf/resolv.conf"
+
