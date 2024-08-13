@@ -109,6 +109,8 @@ export PATH="$PATH:$HOME/go/bin"
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 
+# Adds GG NPM token
+
 source ~/.aliases
 
 export NVM_DIR="$HOME/.nvm"
@@ -121,3 +123,7 @@ export LOCALSTACK_API_KEY="test";
 
 # Docker architecture setup -- set default to AMD64
 # export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
+[[ -s "/Users/ntyler/.gvm/scripts/gvm" ]] && source "/Users/ntyler/.gvm/scripts/gvm"
+
+alias tfenv='arch -x86_64 tfenv'

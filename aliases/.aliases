@@ -42,7 +42,11 @@ alias timestamp="date +%s"
 alias cdp="cd ~/playtime"
 alias dcmigrate="dc up mysql-playtime-migrations mysql-playtime-library-migrations"
 alias dcseed="dc up mysql-playtime-seeds mysql-playtime-library-seeds"
+alias awslogin="awsssome && awsssome -profile peardeck && awsssome -profile tutorme"
+alias cdl="cd /liminex"
 
 # Windows
 alias wslsetup="sudo mkdir /run/resolvconf && sudo touch /run/resolvconf/resolv.conf && sudo sysctl fs.inotify.max_user_instances=512 && sudo sysctl -p && sudo vim /run/resolvconf/resolv.conf"
 
+# macOS
+alias filelimit="sudo launchctl limit maxfiles 128000 524288 && ulimit -n 524288 10485760"
