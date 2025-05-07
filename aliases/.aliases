@@ -3,6 +3,7 @@ alias brew="/opt/homebrew/bin/brew"
 
 # Git
 alias ga="git add"
+alias gp="git push"
 alias gch="git checkout"
 alias gs="git status"
 alias gl="git log"
