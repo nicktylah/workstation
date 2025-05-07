@@ -37,6 +37,7 @@ alias dc="docker-compose"
 
 # General
 alias timestamp="date +%s"
+alias la="ls -al"
 
 # Team 0
 alias cdp="cd ~/playtime"
