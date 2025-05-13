@@ -2,6 +2,7 @@ alias zshrc="vim ~/.zshrc"
 alias brew="/opt/homebrew/bin/brew"
 
 # Git
+alias g="git"
 alias ga="git add"
 alias gp="git push"
 alias gch="git checkout"
