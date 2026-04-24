@@ -33,7 +33,7 @@ gnb () {
 
 # Docker
 alias rmcontainers="docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm"
-alias dc="docker-compose"
+alias dc="docker compose"
 
 # General
 alias timestamp="date +%s"

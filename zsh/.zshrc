@@ -102,14 +102,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/flutter/bin"
 
 # Adds brew bin into PATH (since we installed into /opt/homebrew instead of /usr/local)
-# export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/bin"
 
 # Adds ~/go/bin to PATH
 export PATH="$PATH:$HOME/go/bin"
 export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
-
-# Adds GG NPM token
 
 source ~/.aliases
 
@@ -127,3 +125,27 @@ export LOCALSTACK_API_KEY="test";
 [[ -s "/Users/ntyler/.gvm/scripts/gvm" ]] && source "/Users/ntyler/.gvm/scripts/gvm"
 
 alias tfenv='arch -x86_64 tfenv'
+
+# Adds pip3 installed binaries to PATH
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/nicktyler/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
