@@ -1,21 +1,20 @@
--- TODO: validate that mini.files is good and rm commented bits
 return {
   "nvim-mini/mini.files",
   keys = {
-    -- {
-    --   "<leader>e",
-    --   function()
-    --     require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
-    --   end,
-    --   desc = "Open mini.files (directory of current file)",
-    -- },
-    -- {
-    --   "<leader>E",
-    --   function()
-    --     require("mini.files").open(vim.uv.cwd(), true)
-    --   end,
-    --   desc = "Open mini.files (cwd)",
-    -- },
+    {
+      "<leader>e",
+      function()
+        require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
+      end,
+      desc = "Open mini.files (directory of current file)",
+    },
+    {
+      "<leader>E",
+      function()
+        require("mini.files").open(vim.uv.cwd(), true)
+      end,
+      desc = "Open mini.files (cwd)",
+    },
     {
       "<leader>fm",
       function()
@@ -24,18 +23,12 @@ return {
       desc = "Open mini.files (root)",
     },
     opts = {
-      -- mappings = {
-      --   go_in = "<Right>",
-      --   go_out = "<Left>",
-      -- },
-      -- windows = {
-      --   width_nofocus = 20,
-      --   width_focus = 50,
-      --   width_preview = 100,
-      -- },
-      -- options = {
-      --   use_as_default_explorer = true,
-      -- },
+      explorer = {
+        -- This ensures hidden files are visible when you open the explorer
+        hidden = true,
+        -- Optional: if you also want to see files ignored by .gitignore
+        ignored = false,
+      },
     },
   },
 }
