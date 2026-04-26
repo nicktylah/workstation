@@ -2,7 +2,9 @@ alias zshrc="vim ~/.zshrc"
 alias brew="/opt/homebrew/bin/brew"
 
 # Git
+alias g="git"
 alias ga="git add"
+alias gp="git push"
 alias gch="git checkout"
 alias gs="git status"
 alias gl="git log"
@@ -37,6 +39,7 @@ alias dc="docker compose"
 
 # General
 alias timestamp="date +%s"
+alias la="ls -al"
 
 # Team 0
 alias cdp="cd ~/playtime"
